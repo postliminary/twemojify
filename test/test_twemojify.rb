@@ -30,4 +30,9 @@ class TwemojifyTest < Minitest::Test
     assert_equal 'I <img class="emoji" draggable="false" alt="' + "\u2764" + '" src="' + Twemojify.base + 'custom/2764.png"> emoji!',
                  Twemojify.parse("I \u2764 emoji!")
   end
+
+  def test_test_method
+    assert_equal(2, Twemojify.test("I \u2764 emoji!"))
+    assert_equal(nil, Twemojify.test("I emoji!"))
+  end
 end
