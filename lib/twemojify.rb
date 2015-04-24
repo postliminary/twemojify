@@ -9,7 +9,7 @@ module Twemojify
   def self.parse(str)
     if !str.nil?
       str.gsub(MATCH_REG_EX) do |match|
-        "<img class=\"#{class_name}\" draggable=\"false\" alt=\"#{match}\" src=\"#{base}#{size}/#{get_codepoint(match)}#{ext}\">"
+        %Q|<img class="#{class_name}" draggable="false" alt="#{match}" src="#{base}#{size}/#{get_codepoint(match)}#{ext}">|
       end
     end
   end
