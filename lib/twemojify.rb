@@ -1,5 +1,6 @@
 require 'twemojify/configuration'
 require 'twemojify/version'
+require 'twemojify/railtie' if defined?(Rails)
 
 module Twemojify
   extend Configuration
