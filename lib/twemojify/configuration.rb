@@ -6,13 +6,15 @@ module Twemojify
         :base,
         :ext,
         :size,
-        :class_name
+        :class_name,
+        :folder
     ]
 
     DEFAULT_BASE = '//twemoji.maxcdn.com/'.freeze
     DEFAULT_EXT = '.png'.freeze
     DEFAULT_SIZE = '36x36'.freeze
     DEFAULT_CLASS_NAME = 'emoji'.freeze
+    DEFAULT_FOLDER = nil
 
     attr_accessor *VALID_OPTIONS_KEYS
 
@@ -39,6 +41,7 @@ module Twemojify
       self.ext = DEFAULT_EXT
       self.size = DEFAULT_SIZE
       self.class_name = DEFAULT_CLASS_NAME
+      self.folder = DEFAULT_FOLDER
     end
   end
 end
