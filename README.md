@@ -3,6 +3,7 @@ Twemojify
 
 Twemojify is a bare-bones port of the official Twitter [twemoji](https://github.com/twitter/twemoji) javascript library.
 
+
 Installation
 ------------
 
@@ -17,6 +18,7 @@ Or install directly:
 ```bash
 gem install twemojify
 ```
+
 
 Usage
 -----
@@ -67,12 +69,13 @@ Twemojify includes a basic rails helper to access the parse method.
 <p><%= twemojify(@comment.body) %><p>
 ```
 
+
 Configuration
 -------------
 
 Default values from the original Twitter library are used, but can be customized through an initializer.
 
-```
+```ruby
 # config/initializers/twemojify.rb
 Twemojify.configure do |config|
   config.base = '//twemoji.maxcdn.com/'
@@ -82,6 +85,7 @@ Twemojify.configure do |config|
   config.folder = nil
 end
 ```
+
 
 Options
 -------
@@ -106,6 +110,7 @@ The class assigned the img tags created by the parse method.
 
 Used to point to svg and other custom resources that don't require sizes. Overrides the size option.
 
+
 Notes
 -----
 
@@ -119,6 +124,7 @@ check if the string has already been parsed.
 - DOM parsing (currently uses a simple regex match)
 - Recognize control characters
 
+
 Twitter Attribution Requirements
 --------------------------------
 
@@ -127,6 +133,7 @@ From the official twitter library [readme](https://github.com/twitter/twemoji/bl
 > As an open source project, attribution is critical from a legal, practical and motivational perspective in our opinion. The graphics are licensed under the CC-BY 4.0 which has a pretty good guide on [best practices for attribution](https://wiki.creativecommons.org/Best_practices_for_attribution). 
 
 > However, we consider the guide a bit onerous and as a project, will accept a mention in a project README or an 'About' section or footer on a website. In mobile applications, a common place would be in the Settings/About section (for example, see the mobile Twitter application Settings->About->Legal section). We would consider a mention in the HTML/JS source sufficient also.
+
 
 License
 -------
