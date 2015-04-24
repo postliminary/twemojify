@@ -90,23 +90,23 @@ end
 Options
 -------
 
-### base
+#### base
 
 Indicates the base url to prepend to the emoji img src. You can change the base to point to local assets on your own servers.
 
-### ext
+#### ext
 
 The file extension used for the emoji.
 
-### size
+#### size
 
 Size of the emoji, default sizes follow a ```[width]x[height]``` format, but you can include any kind of custom sizes
 
-### class_name
+#### class_name
 
 The class assigned the img tags created by the parse method.
 
-### folder
+#### folder
 
 Used to point to svg and other custom resources that don't require sizes. Overrides the size option.
 
@@ -114,12 +114,12 @@ Used to point to svg and other custom resources that don't require sizes. Overri
 Notes
 -----
 
-### Parsing HTML
+#### Parsing HTML
 
 Be careful when using the parse method with html string, as it does not sanitize the string nor
 check if the string has already been parsed.
 
-### Features NOT included from the original Twitter library
+#### Features NOT included from the original Twitter library
 
 - DOM parsing (currently uses a simple regex match)
 - Recognize control characters
